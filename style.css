@@ -1,0 +1,50 @@
+.grid {
+    border: 1px solid;
+    display: flex;
+    flex-wrap: wrap;
+    height: 450px;
+    width: 450px;
+}
+
+.grid div {
+    height: 50px;
+    width: 50px;
+}
+
+.ending-block {
+    background-image: url("lilypad.png");
+    background-size: cover;
+}
+
+.starting-block {
+    background-image: url("lilypad.png");
+    background-size: cover;
+}
+
+.lily-pad {
+    background-image: url("lilypad.png");
+    background-size: cover;
+}
+
+.l1,
+.l2,
+.l3 {
+    background-image: url("log.png");
+    background-size: cover;
+}
+
+.l0,
+.l4, .l5, .l6, .l7, .l8, .l9,
+.lf2,
+.lf3 {
+    background-image: url("water.png");
+    background-size: cover;
+}
+
+.froggyLog {
+    background-image: url("froggylog.png");
+}
+
+.froggyLily {
+    background-image: url("froggylily.png");
+}
