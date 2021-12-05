@@ -8,8 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const startBtn = document.querySelector('#button')
     const width = 9
     let currentIndex = 76
-    let currentTime = 20
+    let currentTime = 30
     let timerId
+    squares[currentIndex].classList.add('froggyLily')
+
 
     //move the Frog
     function moveFroggy(e) {
@@ -185,8 +187,16 @@ document.addEventListener('DOMContentLoaded', () => {
             || (squares[currentIndex].classList.contains('l9'))
         ) {
             result.innerHTML = 'You Lost! Try Again?'
-            
-            squares[currentIndex].classList.remove('frog')
+            if ((currentIndex > 10 && currentIndex <= 18) || (currentIndex > 63 && currentIndex <= 71)) {
+                squares[currentIndex].classList.remove('froggyLog')
+                squares[currentIndex].classList.add('splash')
+            } else if ((currentIndex > 27 && currentIndex <= 35) || (currentIndex > 45 && currentIndex <= 53)) {
+                squares[currentIndex].classList.remove('froggyLog')
+                squares[currentIndex].classList.add('splash')
+            } else {
+                squares[currentIndex].classList.remove('froggyLily')
+                squares[currentIndex].classList.add('splash')
+            }
             clearInterval(timerId)
             document.removeEventListener('keyup', moveFroggy)
         }
