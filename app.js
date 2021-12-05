@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function win() {
         if (squares[4].classList.contains('froggyLily')) {
             result.innerHTML = 'You Win!'
-            squares[currentIndex].classList.remove('froggyLily')
+            //squares[currentIndex].classList.remove('froggyLily')
             clearInterval(timerId)
             document.removeEventListener('keyup', moveFroggy)
         }
